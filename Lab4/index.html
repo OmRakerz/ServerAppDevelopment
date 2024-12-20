@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatF</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Модальное окно для ввода имени пользователя -->
+    <div id="modal-overlay">
+        <div id="modal">
+            <h2>Введите ваше имя для чата:</h2>
+            <input type="text" id="username">
+            <button onclick="closeModalAndInitializeChat()">Готово</button>
+        </div>
+    </div>
+    <div class="chat-container">
+        <!-- Область, где отображаются сообщения -->
+        <div id="chat-window"></div>
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="Введите сообщение">
+            <button onclick="sendMessage()">Отправить</button>
+            <button id="logout-button" onclick="logout()">Выйти</button>
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+</html>
