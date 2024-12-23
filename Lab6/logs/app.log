@@ -1,0 +1,10 @@
+2024-12-23 11:53:38,058 - INFO - Watching for file changes with StatReloader
+2024-12-23 11:53:45,210 - INFO - "GET / HTTP/1.1" 200 2396
+2024-12-23 11:53:48,789 - INFO - This is an INFO message
+2024-12-23 11:53:48,790 - WARNING - This is a WARN message
+2024-12-23 11:53:48,791 - ERROR - This is an ERROR message
+2024-12-23 11:53:48,792 - INFO - "GET /log/ HTTP/1.1" 200 38
+2024-12-23 11:53:50,324 - INFO - "GET /logs/ HTTP/1.1" 200 392
+2024-12-23 11:54:30,086 - INFO - execution_time_example executed in 1.01s
+2024-12-23 11:54:30,088 - INFO - "GET /execution-time/ HTTP/1.1" 200 22
+2024-12-23 11:54:31,239 - INFO - "GET /logs/ HTTP/1.1" 200 613
