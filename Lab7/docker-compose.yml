@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  web:
+    image: lab7-django
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app  # Монтируем текущую директорию, чтобы сохранить db.sqlite3
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - redis
+    restart: always  # Контейнер будет перезапущен при любой остановке
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf  # Подключение конфигурации
+    command: redis-server /usr/local/etc/redis/redis.conf  # Запуск Redis с конфигурацией
+    restart: unless-stopped  # Перезапуск, если контейнер не остановлен вручную
+
+
+volumes:
+  redis_data:
